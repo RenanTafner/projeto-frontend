@@ -22,26 +22,31 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
-  <header> 
-    <h1 class = "app-title">Geolocalização</h1>
-     <nav>API para Determinar Geolocalização do Dispositivo</nav> 
+<body class = "body">
+  <header class = "body__header"> 
+    <h1 class = "body__header__title">API de Geolocalização</h1>
   </header> 
   
-  <main> 
-    <section class = "main-feature"> 
+  <main class ="body__main"> 
+    <section class = "body__main__section"> 
 
-      <p>Sua localização no mapa (marcado com o ícone vermelho com a letra "L") baseado nas suas coordenadas de latitude/longitude:</p>
+      <p>Sua localização no mapa (marcado com o ícone vermelho com a letra "L") será</p>
+      <p>gerada baseada nas suas coordenadas de latitude/longitude após a aplicação ser iniciada.</p>
       <p>Observação: Favor aguardar alguns segundos para comunicação com a API do Google Maps.</p>
+
+      <label for="nome">Digite seu nome:</label>
+      <input type="text" class ="body__main__section__input--name" id="nome" name="nome"><br><br>
+
+      <button class = "body__main__section__button--start" onclick="determinarLocalizacao()">Clique aqui para iniciar a aplicação</button> 
+
       <p id = "endereco"></p>
-      
+
 
 
     </section> 
-    <!--<aside class = "secundary-feature"> Algum conteúdo ou feature não-principal de apoio </aside>-->
   </main> 
   
-  <footer>Made by Renan Tafner </footer>
+  <footer class = "body__footer">Made by Renan Tafner </footer>
 
 
 
