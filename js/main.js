@@ -2,12 +2,13 @@ function determinarLocalizacao() {
 
     if ('geolocation' in navigator) {
 
-       var nome = document.getElementById('nome').value;
+       let nome = document.getElementById('nome').value;
 
         if(nome===""){
             alert("Favor digitar o seu nome.")
             return;
         }
+
 
 
         navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
@@ -20,14 +21,14 @@ function determinarLocalizacao() {
 
 function successCallback (position) {
 
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
 
-        var coordenadas = latitude +',' + longitude;
+        const coordenadas = latitude +',' + longitude;
     
-       var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+coordenadas+"&zoom=13&size=600x300&markers=color:red%7Clabel:L%7C"+coordenadas+"&key=AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o";
+       let img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+coordenadas+"&zoom=13&size=600x300&markers=color:red%7Clabel:L%7C"+coordenadas+"&key=AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o";
 
-       var nome = document.getElementById('nome').value;
+       let nome = document.getElementById('nome').value;
 
        document.getElementById('endereco').innerHTML = "<p>Bem vindo " + nome +" , Resultado da consulta:</p><img class = 'body__main__section__image--result' src='"+img_url+"' width='1000' height='600'>";
 
