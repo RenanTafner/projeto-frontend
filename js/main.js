@@ -21,8 +21,8 @@ function determinarLocalizacao() {
 
 function successCallback (position) {
 
-        let latitude = position.coords.latitude;
-        let longitude = position.coords.longitude;
+        let coordenadasObject = {latitude: position.coords.latitude, longitude:position.coords.longitude};
+        let {latitude,longitude} = coordenadasObject;
 
         const coordenadas = latitude +',' + longitude;
     
