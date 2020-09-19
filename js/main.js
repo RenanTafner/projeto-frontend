@@ -9,9 +9,9 @@ function determinarLocalizacao() {
             return;
         }
 
+        let functions = [successCallback,errorCallback];
 
-
-        navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
+        navigator.geolocation.getCurrentPosition(...functions);
 
     }else{
         document.getElementById('endereco').innerHTML = 'Erro: Os recursos de geolocalização não são suportados pelo navegador';
