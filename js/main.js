@@ -24,7 +24,7 @@ function successCallback (position) {
         let coordenadasObject = {latitude: position.coords.latitude, longitude:position.coords.longitude};
         let {latitude,longitude} = coordenadasObject;
 
-        const coordenadas = latitude +',' + longitude;
+        const coordenadas = `${latitude},${longitude}`;
     
        let img_url = `https://maps.googleapis.com/maps/api/staticmap?center=${coordenadas}&zoom=13&size=600x300&markers=color:red%7Clabel:L%7C"${coordenadas}"&key=AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o`;
 
