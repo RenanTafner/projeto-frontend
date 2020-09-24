@@ -5,9 +5,11 @@ function determinarLocalizacao() {
        let nome = document.getElementById(`nome`).value;
 
         if(nome===``){
-            alert(`Favor digitar o seu nome.`)
+            document.getElementById(`mensagem_nome_faltando`).innerHTML = `Erro: Favor digitar seu nome`;
             return;
         }
+
+        document.getElementById(`mensagem_nome_faltando`).innerHTML = ``;
 
         let functions = [successCallback,errorCallback];
 
@@ -30,7 +32,13 @@ function successCallback (position) {
 
        let nome = document.getElementById(`nome`).value;
 
-       document.getElementById(`endereco`).innerHTML = `<p>Bem vindo ${nome} , Resultado da consulta:</p><img class = 'body__main__section__image--result' src='${img_url}' width='1000' height='600'>`;
+       document.getElementById(`endereco`).innerHTML = `<p>Bem vindo ${nome} , Resultado da consulta:</p>
+       <figure>
+       <img class = 'body__main__section__image--result' src='${img_url}' width='1000' height='600' alt='Imagem com um mapa marcando suas coordenadas'>
+       <figCaption>
+       Mapa com a sua localização.
+       </figCaption
+       </figure>`;
 
 }
 

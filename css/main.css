@@ -17,6 +17,7 @@
   height: 10vh;
   box-sizing: border-box;
   color: #fff;
+  text-align: center;
 }
 
 .body__main {
@@ -44,9 +45,16 @@
   width: 200px;
 }
 
-.body__main__section__button--start {
+.body__main__section__application__main__box__button--start {
   background-color: red;
   color: white;
+  width: 200px;
+	height: 100px;
+
+}
+
+.body__main__section__application__main__box{
+  text-align: center;
 }
 
 @media (min-width: 992px) {
