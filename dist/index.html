@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="pt_br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projeto Front-end</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class = "body">
+  <header class = "body__header"> 
+    <div role = "navigation" aria-labelledby="nav1">
+    <h1 id = "nav1" class = "body__header__title">API de Geolocalização</h1>
+  </div>
+  </header> 
+  
+  <main class ="body__main"> 
+    
+    <section class = "body__main__section"> 
+      <div role= "navigation" aria-labelledby="nav2" class="body__main__section__application__main__box">
+      <h1 id = "nav2" class = "body__header__title">Aplicação</h1>
+      <p>Sua localização no mapa (marcado com o ícone vermelho com a letra "L") será</p>
+      <p>gerada baseada nas suas coordenadas de latitude/longitude após a aplicação ser iniciada.</p>
+      <p>Observação: Favor aguardar alguns segundos para comunicação com a API do Google Maps.</p>
+
+      <label for="nome">Digite seu nome:</label>
+      <input type="text" class ="body__main__section__input--name" id="nome" name="nome"><br><br>
+
+      <p><span  aria-live="polite" id= "mensagem_nome_faltando"></span></p>
+
+      
+      <button class = "body__main__section__application__main__box__button--start" onclick="determinarLocalizacao()">Clique aqui para iniciar a aplicação</button> 
+     
+
+      <p id = "endereco"></p>
+
+      <p>Para maiores informações sobre o Google Maps ou o VLIBRAS, acesse:</p>
+      <p><a href="https://cloud.google.com/maps-platform" title="Link para o site oficial da plataforma Google Maps">Site Oficial da plataforma Google Maps</a></p>
+      <p><a href="https://www.vlibras.gov.br/" title="Link para o site oficial da ferramenta VLIBRAS">Site Oficial da ferramenta VLIBRAS</a></p>
+
+      
+    </div>
+    </section> 
+
+  
+  </main> 
+  
+  <footer class = "body__footer">Made by Renan Tafner </footer>
+
+
+
+
+
+  <!-- Add your site or application content here -->
+  <!--<p>Hello world! This is HTML5 Boilerplate.</p>-->
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script>
+    if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('/sw.js')
+    .then(function() { console.log("Service Worker Registered"); });
+     }     
+</script>
+  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>
